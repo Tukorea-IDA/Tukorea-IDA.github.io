@@ -1,14 +1,12 @@
-_asset_bundler_cache
-_site
-.bundle
-.DS_Store
-.jekyll-cache
+# Local Site Directories
+_site/
+.sass-cache/
+.jekyll-cache/
 .jekyll-metadata
-.sass-cache
-*.gem
-*.sublime-project
-*.sublime-workspace
-codekit-config.json
+
+# Ruby Gems
+.bundle
 Gemfile.lock
-node_modules
-npm-debug.log*
+
+# Log Files
+*.log

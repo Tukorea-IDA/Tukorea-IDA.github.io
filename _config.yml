@@ -1,107 +1,112 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+### Site Settings ###
+title               : portfolYOU
+description         : >-
+                      I turn coffee :coffee: into code,
+                      use tabs over spaces
+                      and never broke production.
+baseurl             :                      # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
+repository          : Tukorea-IDA/Tukorea-IDA.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
+remote_theme        : YoussefRaafatNasry/portfolYOU
+open_new_tab        : false                             # Opens external URLs in new tab (works for posts, projects and navbar only)
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-theme: jekyll-theme-so-simple
-# remote_theme: mmistakes/so-simple-theme
-skin: "/assets/css/skins/default.css"
-locale: ko-KR
-title: "My Awesome Site"
-description: "It really is the best."
-baseurl:  # the subpath of your site, e.g. "/blog"
-url: "htts://Tukorea-IDA.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-logo: # path of site logo, e.g. "/images/logo.png"
-date_format: "%Y-%m-%d"
-read_time: # reading time estimates, e.g. true
-words_per_minute: # 200
-mathjax:
-  enable: # MathJax equations, e.g. true, false (default)
-  combo:  # "tex-svg" (default), "tex-mml-chtml", etc.: docs.mathjax.org/en/latest/web/components/combined.html
-  tags:  # "none", "ams" (default), "all"
-google_fonts:
-  - name: "Source Sans Pro"
-    weights: "400,400i,700,700i"
-  - name: "Lora"
-    weights: "400,400i,700,700i"
-google_analytics: # Google Analytics id, e.g. "UA-NNNNNNNN-N"
-disqus:
-  shortname: # Disqus shortname, e.g. "my_disqus_shortname"
-twitter:
-  username: # site's Twitter username, e.g. "mmistakes"
 
-# Liquid
-liquid:
-  error_mode: strict
-
-# Build settings
-permalink: /:categories/:title/
-markdown: kramdown
-feed:
-  path: atom.xml
-
-# Pagination - https://jekyllrb.com/docs/pagination/
-# paginate: 10
-# paginate_path: /page:num/
-
-# Search
-search_full_content: false # can have performance implications for large sites
-
-# Taxonomy pages
-# category_archive_path: "/categories/#"
-# tag_archive_path: "/tags/#"
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
-
+### Plugins ###
 plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-feed
   - jekyll-paginate
+  - jekyll-last-modified-at
+  - jemoji
+  - jekyll-gist
 
-# Front Matter Defaults
-defaults:
-  # Posts defaults
-  - scope:
-      path: "_posts"
-      type: posts
-    values:
-      layout: post
-      share: true
+### Navbar Settings ###
+nav_exclude:                                            # The following paths are excluded from navbar
+  - pages/tags.html
+  - pages/404.html
+  - pages/index.md
+  - documentation/partials/**                           # For Documentation Only
 
-# Site Author
+
+### Author Info ###
 author:
-  name:
-  picture:
-  email:
-  twitter:
-  links:
-    - title:
-      url:
-      icon:
+  name              : John Doe
+  image             : https://i.imgur.com/uyDNQnn.jpg
+  behance           : your_username
+# dribbble          : your_username
+  email             : username@domain.com
+  facebook          : your_username
+  github            : your_username
+# gitlab            : your_username
+# instagram         : your_username
+# kaggle            : your_username
+  linkedin          : your_username
+  medium            : your_username
+# soundcloud        : your_username
+# spotify           : your_username
+# stackoverflow     : your_user_id
+# tumblr            : your_username.tumblr.com
+# twitch            : your_username
+  twitter           : your_username
+# vimeo             : your_username
+# youtube           : your_channel_name
+# keybase           : your_username
 
-# Footer Links
-footer_links:
-  - title: Feed
-    url: atom.xml
-    icon: fas fa-rss-square
+
+### Posts ###
+permalink: /blog/:title
+
+
+### Collections ###
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name
+  elements:                                             # For Documentation Only
+    output: true                                        # For Documentation Only
+
+
+### Disqus ###
+disqus:
+  shortname: your-short-name-disqus                     # Your website Shortname on disqus
+
+
+### Analytics ###
+analytics:
+  enabled: false                                        # Set true to enable analytics
+  google:
+    tracking_id: your-google-tracking-id
+
+
+### Buy me a coffee ###
+# See https://www.buymeacoffee.com/
+buymeacoffee:
+  enabled: false
+  username: your_username
+  color: "#007bff"
+  message: "Thank you for visiting."                    # Message to be displayed aside from the button for a few seconds.
+  description: "Support me on Buy me a coffee!"
+
+
+### Defaults for collections ###
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "page"
+  - scope:                                              # For Documentation Only
+      path: ""                                          # For Documentation Only
+      type: "elements"                                  # For Documentation Only
+    values:                                             # For Documentation Only
+      layout: "element"                                 # For Documentation Only
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: false                                   # Set to true to enable disqus comments
+
+
+### Exclude from processing ###
+exclude:
+  - README.md
+  - CONTRIBUTING.md
+  - LICENSE
+  - "*.log"

@@ -1,22 +1,29 @@
 <!DOCTYPE html>
+
 <!--
-    So Simple Jekyll Theme 3.2.0
-    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
-    Free for personal and commercial use under the MIT license
-    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
 -->
-<html lang="{{ page.lang | default: site.lang | default: 'en-US' }}" class="no-js">
-  {% include head.html %}
 
-  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} {% if page.entries_layout == 'grid' %}page--wide{% endif %} {{ page.title | slugify }}">
-    {% include skip-links.html %}
-    {% include navigation.html %}
-    {% include masthead.html %}
+<html lang="en" class="h-100">
 
+{% include head.html %}
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    {% include navbar.html %}
     {{ content }}
+  </main>
+  {% include footer.html %}
 
-    {% include footer.html %}
-    {% include scripts.html %}
-  </body>
+  {% include analytics.html %}
+  {% include scripts.html %}
+
+  {%- if site.buymeacoffee.enabled == true -%}
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="{{ site.buymeacoffee.username }}" data-description="{{ site.buymeacoffee.description }}" data-message="{{ site.buymeacoffee.message }}" data-color="{{ site.buymeacoffee.color }}" data-position="Right" data-x_margin="16" data-y_margin="16"></script>
+  {%- endif -%}
+</body>
 
 </html>

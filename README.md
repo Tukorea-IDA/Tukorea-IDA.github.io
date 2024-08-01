@@ -1,1 +1,0 @@
-# Tukorea-IDA.github.io
