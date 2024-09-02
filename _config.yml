@@ -1,7 +1,11 @@
 ### Site Settings ###
 title               : TUKOREA-IDALAB
-description         : >-
-                      한국공학대학교 IDALAB 
+description         : |-
+                      한국공학대학교 IDALAB <br><br>
+
+
+                      연구실 인원들의 논문 리뷰 및 정보 공유를 위한 사이트입니다.
+                      
 baseurl             :                      # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : Tukorea-IDA/Tukorea-IDA.github.io    # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : YoussefRaafatNasry/portfolYOU
@@ -33,19 +37,19 @@ author:
   behance           : your_username
 # dribbble          : your_username
   email             : username@domain.com
-  facebook          : your_username
-  github            : your_username
+  # facebook          : your_username
+  github            : TUkorea-IDA
 # gitlab            : your_username
 # instagram         : your_username
 # kaggle            : your_username
-  linkedin          : your_username
-  medium            : your_username
+  # linkedin          : your_username
+  # medium            : your_username
 # soundcloud        : your_username
 # spotify           : your_username
 # stackoverflow     : your_user_id
 # tumblr            : your_username.tumblr.com
 # twitch            : your_username
-  twitter           : your_username
+  # twitter           : your_username
 # vimeo             : your_username
 # youtube           : your_channel_name
 # keybase           : your_username
